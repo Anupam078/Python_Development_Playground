@@ -7,4 +7,4 @@ JSON - JavaScript Object Notation
 -The Request response model uses the JSON to Communicate.
 
 REST- Representation State Transfer
--Its basically a protocol or an architectural design of Api to communicate through WEB(internet).
+-Its basically a protocol or an architectural design of Api to communicate through WEB.
