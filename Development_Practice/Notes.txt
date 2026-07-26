@@ -1,0 +1,10 @@
+API - Application programming interface
+-It allows Different Software apllications to communicate even if they are not build using same language.
+- API EndPoint -> Api end point is basically a feature on the Software we are communicating to.
+
+JSON - JavaScript Object Notation
+-It is a format of key value pairs to share data between Applications .
+-The Request response model uses the JSON to Communicate.
+
+REST- Representation State Transfer
+-Its basically a protocol or an architectural design of Api to communicate through WEB(internet).
