@@ -1,0 +1,1 @@
+Here I am going to practice Fast api framework and gonna install the fast api by creating a virtual environment instead of installing it globally.
