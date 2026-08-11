@@ -15,4 +15,6 @@ app = FastAPI()
 def greet():
     return ("Welcome to fastApi application!")
 
-greet()
+@app.get("/products")
+def get_all_products():
+    return ("This is the products page!")
