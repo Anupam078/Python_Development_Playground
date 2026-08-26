@@ -1,0 +1,45 @@
+Numeric Data conversion:
+    Implicit:complier understand it by itself.
+    a_int = 1
+    b_float = 1.0
+    c_sum = a_int + b_float
+    print(c_sum)
+    print(type(c_sum))
+
+    Explicit:Developer has to define the data type explicitly.
+    x=1
+    y=2
+    (float) (x+y)
+
+Primary Data Structure(Variable type):
+    Interger
+    Float
+    Boolean
+    String
+
+Non primitive Data Structures: don't just store a value but rather a collection of values
+    List
+    Tuple
+    Dictonary
+    Set
+
+Real to complex Data Type:
+    we use fuction complex(real,img)
+    real = 2
+    imag = 5
+    print(complex(real, imag))
+    Output
+    (2+5j)
+
+Decimal , Binary, Octal,Hexadecimal Conversions:
+    binary:bin()
+    Octal:oct()
+    Hexadecimal:hex()
+
+Convert Unicode to character:
+    chr(unicode) returns corresponding character
+Convert character to unicode:
+    ord(char) return unicode of corresponding character
+
+Control Structures:
+    
