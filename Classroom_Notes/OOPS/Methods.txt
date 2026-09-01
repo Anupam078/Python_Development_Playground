@@ -1,0 +1,5 @@
+Methods are functions that defines the property of the class.
+types of methods:
+Instance methods:
+Class methods:
+Static Methods:
