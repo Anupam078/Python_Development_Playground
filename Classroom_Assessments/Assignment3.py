@@ -21,7 +21,6 @@ class Order:
         print("Total:", self.calculate_total())
 
 
-# Derived class[cite: 1]
 class PremiumOrder(Order):
     def __init__(self, oid, nm, bamt, dp, fsf):
         super().__init__(oid, nm, bamt)
@@ -74,8 +73,6 @@ class SalariedEmployee(Employee):
         super().display_info()
         print("Net Salary:", self.calculate_salary())
 
-
-# Commission Employee class[cite: 1]
 class CommissionEmployee(SalariedEmployee):
     def __init__(self, eid, nm, dpt, ms, td, sa, cr):
         super().__init__(eid, nm, dpt, ms, td)
