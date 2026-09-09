@@ -1,0 +1,2 @@
+This is a test file for input and output operations.
+We will write some data to this file and then read it back.
