@@ -1,0 +1,3 @@
+P101, Laptop, 55000
+P102, Mouse, 700
+P103, Keyboard, 1200

@@ -1,0 +1,65 @@
+def process_inventory_system():
+    # PART A: Outer try-except block to handle file opening errors (IOError)
+    try:
+        # PART C: Using context managers ('with' statement) to open all files safely.
+        # Opening them sequentially like this is very readable.
+        with open("inventory.csv", "r") as input_file:
+            with open("inventory_report.txt", "w") as report_file:
+                with open("error_log.txt", "a") as error_file:
+                    
+                    # We will use a manual counter to track line numbers for our error log
+                    line_number = 1
+                    
+                    # Loop through the CSV file one line at a time
+                    for line in input_file:
+                        # Remove any extra spaces or newline characters at the ends of the line
+                        clean_line = line.strip()
+                        
+                        # If the line is completely empty, skip it and move to the next
+                        if clean_line == "":
+                            line_number += 1
+                            continue
+                            
+                        # Split the line into a list of items based on the comma separator
+                        fields = clean_line.split(",")
+                        
+                        # Validate that the line has exactly 4 pieces of data
+                        if len(fields) != 4:
+                            error_file.write(f"Line {line_number} Error: Missing data fields.\n")
+                            line_number += 1
+                            continue
+                        
+                        # Extract each piece of data into a clearly named variable
+                        product_id = fields[0].strip()
+                        product_name = fields[1].strip()
+                        quantity_str = fields[2].strip()
+                        price_str = fields[3].strip()
+                        
+                        # PART B: Inner try-except block to handle math and data conversion errors
+                        try:
+                            # Convert the string text into actual numbers for calculation
+                            quantity = int(quantity_str)
+                            price_per_unit = float(price_str)
+                            
+                            # Calculate the total stock value
+                            total_value = quantity * price_per_unit
+                            
+                            # PART C: Write the successful calculation to the report file
+                            report_file.write(f"{product_id}: {total_value}\n")
+                            
+                        except ValueError as error_message:
+                            # PART B: If int() or float() fails, this block catches the ValueError
+                            # We write the specific ProductID and error to the log file
+                            error_file.write(f"Line {line_number} - Product {product_id} Error: Invalid numbers found. Details: {error_message}\n")
+                        
+                        # Increase the line counter before moving to the next row
+                        line_number += 1
+
+    # PART A: Catching file-related exceptions like FileNotFoundError
+    except IOError as file_error:
+        print(f"Critical System Error: Could not find or open the required files.")
+        print(f"System Details: {file_error}")
+
+
+# Call the function to run the program
+process_inventory_system()
