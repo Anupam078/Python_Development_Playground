@@ -1,0 +1,9 @@
+{
+    "type":"object",
+    "properties":{
+        "city":{"type":"string"},
+        "unit":{"type":"string" , "enum":["metric", "imperial"] , "default":"metric"},
+        "days":{"type":"integer" , "minimum":1 , "maximum":10}
+    },
+    "required":["city"]
+}
