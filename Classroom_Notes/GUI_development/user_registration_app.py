@@ -1,0 +1,26 @@
+import tkinter as tk
+from tkinter import messagebox
+def success():
+    messagebox.showinfo("Success", f"Registration successful for {e1.get()}!")
+root=tk.Tk()
+root.title("Registration App")
+top_frame=tk.Frame(root)
+top_frame.pack(fill="x")
+top_lable=tk.Label(top_frame,text="Register for an Account",font=("Helvetica",16,"bold"))
+top_lable.pack()
+middle_frame=tk.Frame(root)
+middle_frame.pack()
+lb1=tk.Label(middle_frame,text="Username")
+lb1.grid(row=0,column=0)
+e1=tk.Entry(middle_frame)
+e1.grid(row=0,column=1)
+lb2=tk.Label(middle_frame,text="Password")
+lb2.grid(row=1,column=0)
+e2=tk.Entry(middle_frame,show="*")
+e2.grid(row=1,column=1)
+bottom_frame=tk.Frame(root)
+bottom_frame.pack()
+submit_button=tk.Button(bottom_frame,text="Submit",command=success)
+submit_button.pack()
+
+root.mainloop()
