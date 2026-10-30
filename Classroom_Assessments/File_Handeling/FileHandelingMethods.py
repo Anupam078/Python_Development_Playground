@@ -20,4 +20,15 @@ print(Var2)
 f.close()
 
 
+#Question 1:Solution
+with open("students.txt","a") as f:
+    f.write("\nEmma")
+
+#Question 2:Solution
+import os
+if(os.path.exists("temp.txt")):
+    os.remove("temp.txt")
+    print("Delete")
+else:
+    print("Not Found")
 
